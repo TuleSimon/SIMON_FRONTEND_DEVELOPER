@@ -29,6 +29,7 @@ import FilterDropDown from "./components/FilterDropDown";
 import OutlinedTextField from "./components/OutlinedTextField";
 import OutlinedButton from "./components/buttons/OutlinedButton";
 import CapsuleViewer from "./components/CapsuleViewer";
+import Footer from "./components/Footer";
 
 function App() {
   const capsules = useSelector(getPaginatedCapsules);
@@ -192,6 +193,7 @@ function App() {
       </section>
 
       <GetStartedSection />
+      <Footer/>
     </main>
   );
 }

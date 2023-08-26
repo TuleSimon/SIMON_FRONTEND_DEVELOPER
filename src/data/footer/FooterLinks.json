@@ -1,0 +1,71 @@
+[
+ {
+    "title":{
+        "title":"Company",
+        "link":"/company"
+    },
+    "children":[
+        {
+           "title":"Whitepaper",
+           "link":"/whitepaper" 
+        },
+        {
+            "title":"Privacy Policy",
+            "link":"/privacy" 
+         },
+         {
+            "title":"Terms & Condition",
+            "link":"/terms" 
+         },
+         {
+            "title":"Disclaimer",
+            "link":"/disclaimer" 
+         }
+    ]
+ },
+ {
+    "title":{
+        "title":"Simon",
+        "link":"/simon"
+    },
+    "children":[
+        {
+           "title":"Fees",
+           "link":"/fees" 
+        },
+        {
+            "title":"Code",
+            "link":"/code" 
+         },
+         {
+            "title":"NodeJs and Php",
+            "link":"/nodephp" 
+         },
+         {
+            "title":"Next",
+            "link":"/nextjs"  
+         }
+    ]
+ },
+ {
+    "title":{
+        "title":"Support",
+        "link":"/support"
+    },
+    "children":[
+        {
+           "title":"Contact Us",
+           "link":"/contact us" 
+        },
+        {
+            "title":"Faqs",
+            "link":"/faqs" 
+         },
+         {
+            "title":"Announcements",
+            "link":"/announcements"  
+         }
+       
+    ]
+ }
+]

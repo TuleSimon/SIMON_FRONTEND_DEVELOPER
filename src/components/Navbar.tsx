@@ -8,20 +8,15 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [toogleNavbar, setToggleNavbar] = useState(false);
- 
 
   return (
     <main className=" bg-navBar border-b-0 z-20 md:border-b border-white/10 backdrop-blur-sm w-full py-2 md:py-4 relative">
       <div className="flex container place-content-between flex-wrap">
         <a href="/" className="flex gap-0.5 md:gap-2 place-items-center">
-          <div
-            className="boundless text-lg font-poppins bg-black p-2 rounded-lg flex w-fit h-auto"
-          >
+          <div className="boundless text-lg font-poppins bg-black p-2 rounded-lg flex w-fit h-auto">
             SIMON TEST
-
-            </div>
-       </a>
-
+          </div>
+        </a>
 
         <div className="md:hidden flex place-content-center relative">
           <div
@@ -90,29 +85,40 @@ export default function Navbar() {
             </svg>
           </div>
         </div>
-        
 
-        <div className={`${toogleNavbar ? "opacity-100 z-20 drop-shadow-md shadow-[rgba(23, 25, 60, 0.30] rounded-xl" :"opacity-0"} px-[23px] py-[24px] transition-all duration-500 ease-in-out flex flex-col gap-[16px] w-full absolute top-full left-0 bg-navBar_Dark rounded-lg`}>
-
-        {NavbarMenus.map((menu) => (
-            <a key={menu.link} onClick={e=> setToggleNavbar(false)} href={menu.link}>
+        <div
+          className={`${
+            toogleNavbar
+              ? "opacity-100 z-20 drop-shadow-md shadow-[rgba(23, 25, 60, 0.30] rounded-xl"
+              : "opacity-0"
+          } px-[23px] py-[24px] transition-all duration-500 ease-in-out flex flex-col gap-[16px] w-full absolute top-full left-0 bg-navBar_Dark rounded-lg`}
+        >
+          {NavbarMenus.map((menu) => (
+            <a
+              key={menu.link}
+              onClick={(e) => setToggleNavbar(false)}
+              href={menu.link}
+            >
               <TextButton> {menu.title} </TextButton>
             </a>
           ))}
 
-          <hr className="w-full h-[1px] my-[6px] border-divider"/>
+          <hr className="w-full h-[1px] my-[6px] border-divider" />
 
-          <UnFilledButton  classNames="text-start w-fit"> Log in </UnFilledButton>
-          <FilledButton  classNames="text-start w-fit px-5 py-3"> Create account </FilledButton>
-       
-
+          <UnFilledButton classNames="text-start w-fit">
+            {" "}
+            Log in{" "}
+          </UnFilledButton>
+          <FilledButton classNames="text-start w-fit px-5 py-3">
+            {" "}
+            Create account{" "}
+          </FilledButton>
         </div>
-        
 
         <div className="md:flex hidden">
           {NavbarMenus.map((menu) => (
-            <a key={menu.link} href={menu.link} >
-              <TextButton > {menu.title} </TextButton>
+            <a key={menu.link} href={menu.link}>
+              <TextButton> {menu.title} </TextButton>
             </a>
           ))}
         </div>
@@ -120,7 +126,6 @@ export default function Navbar() {
         <div className="md:flex hidden gap-4 justify-self-end place-self-end tabw:grow place-content-end mdw:w-full mdw:mt-2">
           <UnFilledButton> Log in </UnFilledButton>
           <FilledButton> Create account </FilledButton>
-        
         </div>
       </div>
     </main>
