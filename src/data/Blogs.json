@@ -1,0 +1,22 @@
+[{
+    "date":"March 17, 2023",
+    "title": "Blog title",
+    "description":"This section should contain short description of the blog post",
+    "slug":"slug1",
+    "image":"https://picsum.photos/500"
+},
+{
+    "date":"March 18, 2023",
+    "title": "Blog title 2",
+    "description":"This section should contain short description of the blog post",
+    "slug":"slug2",
+    "image":"https://picsum.photos/600"
+},
+{
+    "date":"March 10, 2023",
+    "title": "Blog title 3",
+    "description":"This section should contain short description of the blog post",
+    "slug":"slug3",
+    "image":"https://picsum.photos/620"
+}
+]

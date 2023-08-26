@@ -1,0 +1,26 @@
+[
+    {
+        "id": "capsule_serial",
+        "name": "Capsule Serial"
+    },
+    {
+        "id": "capsule_id",
+        "name": "Capsule ID"
+    },
+    {
+        "id": "status",
+        "name": "Status"
+    },
+    {
+        "id": "original_launch",
+        "name": "Original Launch"
+    },
+    {
+        "id": "landings",
+        "name": "Landings"
+    },
+    {
+        "id": "type",
+        "name": "Type"
+    }
+]
