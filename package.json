@@ -49,6 +49,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "axios-mock-adapter": "^1.21.5",
     "jest": "^27.5.1",
+    "react-test-renderer": "^18.2.0",
     "tailwindcss": "^3.3.3"
   }
 }

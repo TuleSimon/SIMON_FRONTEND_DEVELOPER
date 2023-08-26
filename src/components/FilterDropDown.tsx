@@ -19,6 +19,7 @@ export default function FilterDropDown({
     <div className="z-50 group relative">
       <button
         id="dropdownHoverButton"
+        data-testid="filter_dropdown_button"
         data-dropdown-toggle="dropdownHover"
         onClick={(e) => setExpanded(!expand)}
         data-dropdown-trigger="hover"
@@ -47,6 +48,7 @@ export default function FilterDropDown({
       {/* <!-- Dropdown menu --> */}
       <div
         id="dropdownHover"
+        data-testid="filter_dropdown_div"
         className={`z-10 ${
           expand === true ? "block" : "hidden"
         } absolute top-[130%] bg-[#24293D] divide-y divide-gray-100 rounded-lg shadow w-44`}
