@@ -9,7 +9,7 @@ afterEach(() => {
   cleanup(); // Resets the DOM after each test suite
 });
 
-describe("Button Component", () => {
+describe("Capsule List Component", () => {
   const onClicked = jest.fn();
 
   // Test 1
