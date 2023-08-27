@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import "./App.css";
 import GetStartedSection from "./components/GetStartedSection.tsx";
 import Navbar from "./components/Navbar";
 import {
