@@ -29,25 +29,6 @@ describe("counter reducer", () => {
     },
   };
 
-  const testDataState = {
-    capsules: [],
-    paginatedCapsules: [],
-    status: "idle",
-    order: "desc",
-    page: 1,
-    hasMore: true,
-    sort: {
-      id: "capsule_serial",
-      name: "Capsule Serial",
-    },
-    searchValue: "",
-    capsuleToView: undefined,
-    searchPropery: {
-      id: "capsule_serial",
-      name: "Capsule Serial",
-    },
-  };
-
   it("should handle initial state", () => {
     expect(capsuleReducer(undefined, { type: "unknown" })).toEqual(
       initialState

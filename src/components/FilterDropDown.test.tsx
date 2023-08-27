@@ -12,8 +12,6 @@ describe("Button Component", () => {
   const onSelected = jest.fn();
   render(<FilterDropDown onSelected={onSelected} selectedValue="test" />);
   const button = screen.getByTestId("filter_dropdown_button");
-  const dropDown = screen.getByTestId("filter_dropdown_div");
-  const buttonLabel = screen.getByText("test"); // Replace with the actual button label
 
   // Test 1
   it("Filter button Rendering", () => {
