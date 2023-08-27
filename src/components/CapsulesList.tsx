@@ -2,29 +2,28 @@ import React from "react";
 import OutlinedButton from "./buttons/OutlinedButton";
 
 interface Capsule {
-    capsule_serial: string;
-    capsule_id: string;
-    status: string;
-    original_launch: string;
-    original_launch_unix: number;
-    missions: {
-      name: string;
-      flight: number;
-    }[];
-    landings: number;
-    type: string;
-    details: string;
-    reuse_count: number;
-  }
+  capsule_serial: string;
+  capsule_id: string;
+  status: string;
+  original_launch: string | null;
+  original_launch_unix: number | null;
+  missions: {
+    name: string;
+    flight: number;
+  }[];
+  landings: number;
+  type: string;
+  details: string | null;
+  reuse_count: number;
+}
 
 function CapsulesList({
   capsules,
-  onCapsuleClicked
+  onCapsuleClicked,
 }: {
   capsules: Capsule[];
-  onCapsuleClicked:( capsule:Capsule)=>void
+  onCapsuleClicked: (capsule: Capsule) => void;
 }) {
-  console.log(capsules);
 
   // FORMATS THE DATE TO READABLE FORMAT
   function formatUtcTime(utcTimeString: string) {
@@ -65,7 +64,7 @@ function CapsulesList({
               <div className="flex h-full flex-col px-[20px] py-[18px] mb-[20px] text-start gap-4">
                 <p className=" text-xs text-grey-200 font-light ">
                   {" "}
-                  {formatUtcTime(capsule.original_launch)}
+                  {capsule.original_launch && formatUtcTime(capsule.original_launch)}
                 </p>
                 <h2 className="  text-[22px] text-onPrimary font-semibold ">
                   {" "}
@@ -76,7 +75,7 @@ function CapsulesList({
                   {capsule.details}
                 </p>
 
-                <button  onClick={e => onCapsuleClicked(capsule)}>
+                <button onClick={(e) => onCapsuleClicked(capsule)}>
                   <OutlinedButton classNames=" border-primary-300 text-primary-300 text-[13px] w-fit ">
                     {" "}
                     View Details{" "}
@@ -90,7 +89,13 @@ function CapsulesList({
 
       {capsules.length < 1 && (
         <div className="flex flex-col  place-content-center place-items-center">
-          <img src="/empty_bin.svg" width={500} height={500} className="text-white w-3/6 md:w-2/6" alt="Empty" />
+          <img
+            src="/empty_bin.svg"
+            width={500}
+            height={500}
+            className="text-white w-3/6 md:w-2/6"
+            alt="Empty"
+          />
           <p className="  text-[26px] mt-4 text-onPrimary font-semibold ">
             {"No Capsules Found "}
           </p>
